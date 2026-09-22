@@ -177,8 +177,7 @@ const questions = [
 
         int main() {
             int x = 10;
-            cout << x;
-            * 2;
+            cout << x;* 2;
             return 0;
         }`,
         type: "identification",
