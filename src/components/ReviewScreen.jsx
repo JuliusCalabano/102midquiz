@@ -71,6 +71,12 @@ function ReviewScreen({
 
                         </p>
 
+                        {q.code && (
+                            <pre className="bg-slate-900 text-green-400 p-4 rounded-lg overflow-x-auto mb-4 text-sm">
+                                <code>{q.code}</code>
+                            </pre>
+                        )}
+
                         <p>
 
                             Your Answer :

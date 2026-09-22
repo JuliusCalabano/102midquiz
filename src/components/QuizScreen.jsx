@@ -69,7 +69,7 @@ function QuizScreen({
             </div>
             <Timer timeLeft={timeLeft} />
             {/* Pause Controls */}
-            <div className="flex items-center justify-between mt-4 mb-4">
+            {/* <div className="flex items-center justify-between mt-4 mb-4">
 
                 <p className="text-white text-sm">
                     Pause Time:{" "}
@@ -95,7 +95,7 @@ function QuizScreen({
                     </button>
                 )}
 
-            </div>
+            </div> */}
             <QuestionCard
                 question={question}
                 onAnswer={onAnswer}

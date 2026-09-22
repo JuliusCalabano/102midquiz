@@ -51,39 +51,47 @@ function QuestionCard({ question, onAnswer, selectedAnswer, }) {
                 )}
 
                 {question.type === "identification" && (
-                    <form
-                        className="space-y-4"
-                        onSubmit={(e) => {
-                            e.preventDefault();
+                    <>
+                        {question.code && (
+                            <pre className="bg-slate-900 text-green-400 p-4 rounded-xl overflow-x-auto mb-4">
+                                <code>{question.code}</code>
+                            </pre>
+                        )}
 
-                            if (
-                                selectedAnswer === null &&
-                                textAnswer.trim() !== ""
-                            ) {
-                                onAnswer(textAnswer);
-                            }
-                        }}
-                    >
-                        <input
-                            type="text"
-                            value={textAnswer}
-                            onChange={(e) => setTextAnswer(e.target.value)}
-                            disabled={selectedAnswer !== null}
-                            placeholder="Type your answer..."
-                            className="w-full p-4 rounded-xl bg-slate-700 border border-slate-600 text-white"
-                        />
+                        <form
+                            className="space-y-4"
+                            onSubmit={(e) => {
+                                e.preventDefault();
 
-                        <button
-                            type="submit"
-                            disabled={
-                                selectedAnswer !== null ||
-                                textAnswer.trim() === ""
-                            }
-                            className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl"
+                                if (
+                                    selectedAnswer === null &&
+                                    textAnswer.trim() !== ""
+                                ) {
+                                    onAnswer(textAnswer);
+                                }
+                            }}
                         >
-                            Submit Answer
-                        </button>
-                    </form>
+                            <input
+                                type="text"
+                                value={textAnswer}
+                                onChange={(e) => setTextAnswer(e.target.value)}
+                                disabled={selectedAnswer !== null}
+                                placeholder="Type your answer..."
+                                className="w-full p-4 rounded-xl bg-slate-700 border border-slate-600 text-white"
+                            />
+
+                            <button
+                                type="submit"
+                                disabled={
+                                    selectedAnswer !== null ||
+                                    textAnswer.trim() === ""
+                                }
+                                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl"
+                            >
+                                Submit Answer
+                            </button>
+                        </form>
+                    </>
                 )}
 
                 {/* Enumeration */}

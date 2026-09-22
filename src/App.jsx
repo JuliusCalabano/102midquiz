@@ -254,13 +254,13 @@ function App() {
   const submitScore = async () => {
 
     const formURL =
-      "https://docs.google.com/forms/d/e/1FAIpQLSeatjgjdp_Fq3lsSJ7JLdC0yR-bbvJMSDAO78-eeB10lfnTIA/formResponse";
+      "https://docs.google.com/forms/d/e/1FAIpQLSc4GCQBgj6uSS7r8tSAdf3Jof3803yuch4ImKSsdBclP5Y3oQ/formResponse";
     const formData = new FormData();
 
     formData.append("entry.366340186", studentName);
-    formData.append("entry.868419755", score);
-    formData.append("entry.2110275814", wrongCount);
-    formData.append("entry.2110275814", timeoutCount);
+    formData.append("entry.88892135", score);
+    formData.append("entry.638654762", wrongCount);
+    formData.append("entry.1263935434", timeoutCount);
 
     try {
 
