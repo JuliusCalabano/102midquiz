@@ -298,7 +298,7 @@ function App() {
       <div className="min-h-screen bg-black/60">
         {screen === "start" && (
           <StartScreen
-            title="MAS3 - Prelim Examination"
+            title="Midterm Quiz"
             totalQuestions={quizQuestions.length}
             totalPoints={totalPoints}
             studentName={studentName}
